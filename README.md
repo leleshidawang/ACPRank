@@ -470,8 +470,8 @@ Q67890,MA0001,1,89,MGSVRSTFQDLLTCSNNGKYHPVFLLLTVAACGPYSVQ,89,full,2,0,0.645
 Basic Usage (Default 6 processes)
 python3 02_multi_level_peptide_generator.py
 Specify Number of Processes
-# Use 12 processes for faster processing
+### Use 12 processes for faster processing
 python3 02_multi_level_peptide_generator.py --processes 12
 
-# Use 2 processes to save memory
+### Use 2 processes to save memory
 python3 02_multi_level_peptide_generator.py --processes 2
