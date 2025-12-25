@@ -305,3 +305,173 @@ db_config = {
 }
 ```
 
+
+## Stage 2: Multi-Level Peptide Generation (02_multi_level_peptide_generator.py)
+
+### 📊 Overview
+
+`02_multi_level_peptide_generator.py` is the second stage of the ACPRank pipeline. It uses the prediction models trained in stage 1 (01) to predict protease cleavage sites in target sequences and generates multi-level peptides based on these sites. The script uses multiprocessing to accelerate large-scale sequence analysis.
+
+### 🔄 Workflow
+
+```
+┌─────────────────────────────────────────────────────┐
+│  Input: Prediction Models + Target Sequence FASTA   │
+└─────────────────────────────────────────────────────┘
+                         ↓
+┌─────────────────────────────────────────────────────┐
+│  Step 1: Load Prediction Models                     │
+│     - Read prediction_models.pkl (from stage 01)    │
+│     - Parse frequency matrices and position weights │
+└─────────────────────────────────────────────────────┘
+                         ↓
+┌─────────────────────────────────────────────────────┐
+│  Step 2: Extract Target Sequences                   │
+│     - Load FASTA files                              │
+│     - Optionally: Remove N-terminal signal peptides │
+└─────────────────────────────────────────────────────┘
+                         ↓
+┌─────────────────────────────────────────────────────┐
+│  Step 3: Predict Cleavage Sites (Multiprocessing)   │
+│     - For each sequence × each protease combination │
+│     - Score all positions using the model           │
+│     - Filter positions above threshold              │
+└─────────────────────────────────────────────────────┘
+                         ↓
+┌─────────────────────────────────────────────────────┐
+│  Step 4: Generate Peptides (Two Modes)              │
+│     - Full mode: All predicted sites cleaved at once│
+│     - Level-1 mode: Each site cleaved individually  │
+└─────────────────────────────────────────────────────┘
+                         ↓
+┌─────────────────────────────────────────────────────┐
+│  Output: Multi-Level Peptides CSV Files             │
+└─────────────────────────────────────────────────────┘
+```
+
+### 📥 Input Files
+
+#### 1. **prediction_models.pkl** (Required)
+Binary model cache file generated in stage 1.
+
+**Content Structure:**
+```python
+{
+  'MA0001': {
+    'frequency_matrix': {
+      'A': {'P5': 0.15, 'P4': 0.20, ..., 'P5\'': 0.10},
+      'C': {'P5': 0.05, 'P4': 0.08, ..., 'P5\'': 0.02},
+      ...  # 20 standard amino acids
+    },
+    'position_weights': {
+      'P5': 0.08, 'P4': 0.10, 'P3': 0.12, 'P2': 0.15,
+      'P1': 0.20, 'P1\'': 0.18, 'P2\'': 0.10, ...
+    },
+    'min_tp_score': 0.45  # Prediction threshold
+  },
+  'MA0002': {...},
+  ...
+}
+```
+
+#### 2. **processed_by_SignalP6.fasta** (Required)
+Protein sequences that have been processed by SignalP6. These sequences have had their signal peptides identified and removed by SignalP6.
+
+**Format Example:**
+```fasta
+>sp|P12345|PROT_HUMAN Protein name
+MKTLAVVFLLLTVAACGPYSVQVRHGEQGEGLGD...
+>sp|Q67890|ANOTH_HUMAN Another protein
+MGSVRSTFQDLLTCSNNGKYH...
+```
+
+**Characteristics:**
+- `remove_n_term=0` (sequences are kept intact)
+- Already processed by SignalP6 (signal peptides removed)
+- Ready for direct analysis
+
+#### 3. **missing_sequences.fasta** (Required)
+Protein sequences that were NOT identified as having signal peptides by SignalP6. The first 20 amino acids are removed from these sequences as they may contain putative signal peptides.
+
+**Format Example:**
+```fasta
+>sp|P11111|MISS_HUMAN Missing sequence
+MKTLAVVFLLLTVAACGPYSVQVRHGEQGEGLGD...
+>sp|Q22222|NEWP_HUMAN New protein
+MGSVRSTFQDLLTCSNNGKYH...
+```
+
+**Characteristics:**
+- `remove_n_term=20` (first 20 amino acids are removed)
+- Sequences where SignalP6 could not identify a signal peptide
+- First 20 residues removed as potential signal peptide region
+
+#### 4. **merops_valid_id_mapping.csv** (Optional)
+UniProt to MEROPS mapping file (used only for reference information).
+
+**Format:**
+```csv
+gene_name,uniprot_id,merops_id
+CTSB,P07711,MA0001
+CTSL,Q16378,MA0002
+```
+
+### 📤 Output Files
+
+The script generates structured output in the `multi_level_peptides/` directory:
+
+```
+multi_level_peptides/
+├── {uniprot_id}/                           [Results per protein]
+│   ├── MA0001_multi_level_peptides.csv    [Peptides from protease MA0001]
+│   ├── MA0002_multi_level_peptides.csv    [Peptides from protease MA0002]
+│   ├── MA0003_multi_level_peptides.csv    [Peptides from protease MA0003]
+│   └── ...
+├── {uniprot_id_2}/
+│   ├── MA0001_multi_level_peptides.csv
+│   ├── MA0002_multi_level_peptides.csv
+│   └── ...
+└── {uniprot_id_N}/
+    └── ...
+```
+
+#### Output CSV File Format
+
+**File Name:** `{merops_id}_multi_level_peptides.csv`
+
+**Column Descriptions:**
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `substrate_uniprot` | String | UniProt ID of substrate protein |
+| `protease_merops_id` | String | MEROPS ID of protease |
+| `start_pos` | Integer | Start position of peptide in original protein (1-indexed) |
+| `end_pos` | Integer | End position of peptide in original protein |
+| `peptide` | String | Amino acid sequence of peptide |
+| `length` | Integer | Peptide length (number of amino acids) |
+| `level` | String | Peptide level: `full` or `level_1` |
+| `used_sites` | Integer | Number of cleavage sites used to generate this peptide |
+| `start_score` | Float | Cleavage score at peptide start position |
+| `end_score` | Float | Cleavage score at peptide end position |
+
+**Example Data:**
+
+```csv
+substrate_uniprot,protease_merops_id,start_pos,end_pos,peptide,length,level,used_sites,start_score,end_score
+P12345,MA0001,1,120,MKTLAVVFLLLTVAACGPYSVQVRHGEQGEGLGDSPVLIVEFPDSKLTSGP,120,full,3,0,0.568
+P12345,MA0001,120,245,FQNQALPPVZVAAHITQTTIGVEASQTDGKNQVF,125,full,3,0.568,0.723
+P12345,MA0001,245,400,ASLGEEKLIVDDIIRQGLLSMGFP,155,full,3,0.723,0.612
+P12345,MA0001,1,120,MKTLAVVFLLLTVAACGPYSVQVRHGEQGEGLGDSPVLIVEFPDSKLTSGP,120,level_1,1,0,0.568
+P12345,MA0001,120,400,FQNQALPPVZVAAHITQTTIGVEASQTDGKNQVFASLGEEKLIVDDIIRQGLLSMGFP,280,level_1,1,0.568,0
+Q67890,MA0001,1,89,MGSVRSTFQDLLTCSNNGKYHPVFLLLTVAACGPYSVQ,89,full,2,0,0.645
+```
+
+🎯 Usage
+Basic Usage (Default 6 processes)
+python3 02_multi_level_peptide_generator.py
+Specify Number of Processes
+# Use 12 processes for faster processing
+python3 02_multi_level_peptide_generator.py --processes 12
+
+# Use 2 processes to save memory
+python3 02_multi_level_peptide_generator.py --processes 2
