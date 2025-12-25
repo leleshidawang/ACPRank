@@ -85,7 +85,7 @@ class CostSensitiveRankingLoss(tf.keras.losses.Loss):
 
 class PeptideRankingConfig:
     def __init__(self):
-        self.peptide_data_csv = "05_short_peptides_31aa_and_below.csv"
+        self.peptide_data_csv = "ACPs.csv"
         self.pretrained_config_path = "models/config.json"
         self.pretrained_weights_path = "models/peptide_mlm_model_best.weights.h5"
         self.model_path = "models/peptide_ranking_model"
