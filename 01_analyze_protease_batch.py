@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import os
 import sys
 import mysql.connector
@@ -23,10 +21,6 @@ class ProteaseAnalyzer:
         self.base_output_dir = "protease_analysis_batch"
         self.current_output_dir = None
         self.model_cache_file = os.path.join(self.base_output_dir, "prediction_models.pkl")
-        self.sequence_cache_dir = os.path.join(self.base_output_dir, "sequence_cache")
-        os.makedirs(self.sequence_cache_dir, exist_ok=True)
-        self.local_sequences = {}
-        self.local_fasta_loaded = False
         self.frequency_matrix = None
         self.position_weights = None
         self.min_tp_score = None
@@ -81,78 +75,8 @@ class ProteaseAnalyzer:
             print(f"Query error: {type(err).__name__}: {str(err)}")
             return {}
 
-    def load_local_proteome(self, fasta_file="uniprotkb_organism_id_9606_2025_05_13.fasta"):
-        if self.local_fasta_loaded:
-            return
-
-        if not os.path.exists(fasta_file):
-            print(f"Warning: Local proteome file {fasta_file} not found")
-            self.local_fasta_loaded = True
-            return
-
-        try:
-            print(f"Loading sequences from local proteome file: {fasta_file}")
-            count = 0
-
-            for record in SeqIO.parse(fasta_file, "fasta"):
-                if '|' in record.id:
-                    uniprot_id = record.id.split('|')[1]
-                elif record.id.startswith("UP") or record.id.startswith("sp") or record.id.startswith("tr"):
-                    parts = record.id.split()
-                    uniprot_id = parts[0].strip()
-                else:
-                    uniprot_id = record.id.strip()
-
-                self.local_sequences[uniprot_id] = (record.description, str(record.seq))
-
-                cache_file = os.path.join(self.sequence_cache_dir, f"{uniprot_id}.fasta")
-                if not os.path.exists(cache_file):
-                    with open(cache_file, 'w') as f:
-                        f.write(f">{record.description}\n")
-                        f.write(str(record.seq))
-
-                count += 1
-
-            print(f"Loaded {count} sequences from local proteome file")
-            self.local_fasta_loaded = True
-
-        except Exception as e:
-            print(f"Error loading local proteome file: {e}")
-            self.local_fasta_loaded = True
-
     def get_uniprot_sequence(self, uniprot_id):
-        if not self.local_fasta_loaded:
-            self.load_local_proteome()
-
-        cache_file = os.path.join(self.sequence_cache_dir, f"{uniprot_id}.fasta")
-        if os.path.exists(cache_file):
-            try:
-                with open(cache_file, 'r') as f:
-                    content = f.read()
-
-                header = ""
-                sequence = ""
-                for i, line in enumerate(content.split('\n')):
-                    if i == 0 and line.startswith('>'):
-                        header = line
-                    elif not line.startswith('>'):
-                        sequence += line.strip()
-
-                if not header.startswith('>'):
-                    header = '>' + header
-
-                return header, sequence
-            except Exception as e:
-                print(f"Error reading cached sequence for {uniprot_id}: {e}")
-
-        if uniprot_id in self.local_sequences:
-            header, sequence = self.local_sequences[uniprot_id]
-            print(f"Found {uniprot_id} in local proteome")
-
-            header_with_prefix = '>' + header if not header.startswith('>') else header
-            return header_with_prefix, sequence
-
-        print(f"Sequence for {uniprot_id} not found locally, trying UniProt...")
+        print(f"Downloading sequence for {uniprot_id} from UniProt...")
         url = f"https://rest.uniprot.org/uniprotkb/{uniprot_id}.fasta"
 
         try:
@@ -166,11 +90,8 @@ class ProteaseAnalyzer:
                     elif not line.startswith('>'):
                         sequence += line.strip()
 
-                with open(cache_file, 'w') as f:
-                    f.write(response.text)
-
-                header_stripped = header[1:] if header.startswith('>') else header
-                self.local_sequences[uniprot_id] = (header_stripped, sequence)
+                if not header.startswith('>'):
+                    header = '>' + header
 
                 return header, sequence
             else:
@@ -1003,8 +924,6 @@ if __name__ == "__main__":
     }
 
     analyzer = ProteaseAnalyzer(db_config)
-
-    analyzer.load_local_proteome("uniprotkb_organism_id_9606_2025_05_13.fasta")
 
     analyzer.batch_process_proteases("merops_valid_id_mapping.csv",
                                   analyze_only=args.analyze_only,
