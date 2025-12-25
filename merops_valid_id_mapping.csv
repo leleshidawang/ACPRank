@@ -1,0 +1,142 @@
+gene_name,uniprot_id,protein_name,merops_id,merops_name,source,found_name,is_valid_id
+CLCA1,A8K7I4,CLCA1_HUMAN Calcium-activated chloride channel regulator 1,M87.001,chloride channel accessory protein 1,Gene match: CLCA1 g.p. ({Homo sapiens}),Yes,Yes
+MASP2,O00187,MASP2_HUMAN Mannan-binding lectin serine protease 2,S01.229,mannan-binding lectin-associated serine peptidase 2,Gene match: MASP2 g.p. ({Homo sapiens}),Yes,Yes
+ADAMTS3,O15072,ATS3_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 3,M12.220,ADAMTS3 peptidase,Gene match: ADAMTS3 g.p. ({Homo sapiens}),Yes,Yes
+ADAMDEC1,O15204,ADEC1_HUMAN ADAM DEC1,M12.219,ADAMDEC1 peptidase,Gene match: ADAMDEC1 peptidase,Yes,Yes
+TMPRSS2,O15393,TMPS2_HUMAN Transmembrane protease serine 2,S01.247,epitheliasin,Gene match: TMPRSS2 g.p. ({Homo sapiens}),Yes,Yes
+ADAM12,O43184,ADA12_HUMAN Disintegrin and metalloproteinase domain-containing protein 12,M12.212,ADAM12 peptidase,Gene match: ADAM12 peptidase,Yes,Yes
+KLK10,O43240,KLK10_HUMAN Kallikrein-10,S01.246,kallikrein-related peptidase 10,Gene match: KLK10 g.p. ({Homo sapiens}),Yes,Yes
+TMPRSS11D,O60235,TM11D_HUMAN Transmembrane protease serine 11D,S01.047,human airway trypsin-like peptidase,Gene match: TMPRSS11D g.p. ({Homo sapiens}),Yes,Yes
+KLK8,O60259,KLK8_HUMAN Kallikrein-8,S01.244,kallikrein-related peptidase 8,Gene match: KLK8 g.p. ({Homo sapiens}),Yes,Yes
+ADAMTS4,O75173,ATS4_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 4,M12.221,ADAMTS4 peptidase,Gene match: ADAMTS4 g.p. ({Homo sapiens}),Yes,Yes
+ADAMTS2,O95450,ATS2_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 2,M12.246,ADAMTS20 peptidase ({Homo sapiens}-type),Gene match: ADAMTS20 peptidase ({Homo sapiens}-type),Yes,Yes
+F2,P00734,THRB_HUMAN Prothrombin,I04.023,plasmin inhibitor,Gene match: SERPINF2 g.p. ({Homo sapiens}),Yes,Yes
+C1R,P00736,C1R_HUMAN Complement C1r subcomponent,S01.189,complement component C1r-like peptidase,Gene match: complement component C1r-like peptidase,Yes,Yes
+F9,P00740,FA9_HUMAN Coagulation factor IX,S01.214,coagulation factor IXa,Gene match: F9 g.p. ({Homo sapiens}) (activated),Yes,Yes
+F10,P00742,FA10_HUMAN Coagulation factor X,S01.216,coagulation factor Xa,Gene match: F10 g.p. ({Homo sapiens}) (activated),Yes,Yes
+CFD,P00746,CFAD_HUMAN Complement factor D,M98.001,YghJ g.p. ({Escherichia coli}),Gene match: AcfD ({Escherichia coli}),Yes,Yes
+PLG,P00747,PLMN_HUMAN Plasminogen,S01.UPA,subfamily S1A unassigned peptidases,Gene match: BbPlgl ({Branchiostoma belcheri}),Yes,Yes
+F12,P00748,FA12_HUMAN Coagulation factor XII,S01.211,coagulation factor XIIa,Gene match: F12 g.p. ({Homo sapiens}) (activated),Yes,Yes
+PLAU,P00749,UROK_HUMAN Urokinase-type plasminogen activator,C03.015,Plautia stali intestine virus picornain C3,Gene match: Plautia stali intestine virus picornain C3,Yes,Yes
+PLAT,P00750,TPA_HUMAN Tissue-type plasminogen activator,C01.062,cathepsin B-like peptidase (platyhelminth),Gene match: cathepsin B-like peptidase (platyhelminth),Yes,Yes
+CFB,P00751,CFAB_HUMAN Complement factor B,S01.191,complement factor D,UniProt in cleavage: P00751,Yes,Yes
+REN,P00797,RENI_HUMAN Renin,A01.006,chymosin,Gene match: rennet,Yes,Yes
+LTF,P02788,TRFL_HUMAN Lactotransferrin,M12.066,flavastacin,UniProt in cleavage: P02788,Yes,Yes
+F11,P03951,FA11_HUMAN Coagulation factor XI,S01.213,coagulation factor XIa,Gene match: F11 g.p. ({Homo sapiens}) (activated),Yes,Yes
+KLKB1,P03952,KLKB1_HUMAN Plasma kallikrein,S01.212,plasma kallikrein,Gene match: KLKB1 g.p. ({Homo sapiens}) (activated),Yes,Yes
+MMP1,P03956,MMP1_HUMAN Interstitial collagenase,M10.031,Dm1 matrix metallopeptidase,Gene match: AgMMP1 ({Anopheles gambiense}),Yes,Yes
+PROC,P04070,PROC_HUMAN Vitamin K-dependent protein C,S01.218,protein C (activated),Gene match: PROC g.p. ({Homo sapiens}) (activated),Yes,Yes
+C2,P06681,CO2_HUMAN Complement C2,C44.973,Mername-AA144 protein,Gene match: LOC203431 protein ({Homo sapiens}),Yes,Yes
+KLK3,P07288,KLK3_HUMAN Prostate-specific antigen,S01.162,kallikrein-related peptidase 3,Gene match: KLK3 g.p. ({Homo sapiens}),Yes,Yes
+CTSD,P07339,CATD_HUMAN Cathepsin D,A01.009,cathepsin D,Gene match: CTSD g.p. ({Homo sapiens}),Yes,Yes
+PRSS1,P07477,TRY1_HUMAN Serine protease 1,S01.047,human airway trypsin-like peptidase,Gene match: TMPRSS11D g.p. ({Homo sapiens}),Yes,Yes
+PRSS2,P07478,TRY2_HUMAN Trypsin-2,S01.011,testisin,Gene match: PRSS21 g.p. ({Homo sapiens}),Yes,Yes
+CTSL,P07711,CATL1_HUMAN Procathepsin L,C01.009,cathepsin V,Gene match: CTSLV g.p. ({Homo sapiens}),Yes,Yes
+CTSB,P07858,CATB_HUMAN Cathepsin B,C01.060,cathepsin B,Gene match: CTSB g.p. ({Homo sapiens}),Yes,Yes
+CELA2A,P08217,CEL2A_HUMAN Chymotrypsin-like elastase family member 2A,S01.155,pancreatic elastase II,Gene match: CELA2A g.p. ({Homo sapiens}),Yes,Yes
+CELA2B,P08218,CEL2B_HUMAN Chymotrypsin-like elastase family member 2B,S01.155,pancreatic elastase II,Gene match: CELA2B g.p. ({Homo sapiens}),Yes,Yes
+MMP2,P08253,MMP2_HUMAN 72 kDa type IV collagenase,M10.022,matrix metallopeptidase-23B,Gene match: MMP23A g.p. ({Homo sapiens}),Yes,Yes
+MMP3,P08254,MMP3_HUMAN Stromelysin-1,M10.013,matrix metallopeptidase-13,Gene match: AgMMP3 ({Anopheles gambiense}),Yes,Yes
+CTSG,P08311,CATG_HUMAN Cathepsin G,S01.133,cathepsin G,Gene match: CTSG g.p. ({Homo sapiens}),Yes,Yes
+F7,P08709,FA7_HUMAN Coagulation factor VII,S01.215,coagulation factor VIIa,Gene match: F7 g.p. ({Homo sapiens}) (activated),Yes,Yes
+MMP7,P09237,MMP7_HUMAN Matrilysin,M10.005,matrix metallopeptidase-3,UniProt in cleavage: P09237,Yes,Yes
+FURIN,P09958,FURIN_HUMAN Furin,S08.071,furin,Gene match: FURIN g.p. ({Homo sapiens}),Yes,Yes
+PGA4,P0DJD7,PEPA4_HUMAN Pepsin A-4,A01.070,pepsin A4,Gene match: PGA4 g.p. ({Homo sapiens}),Yes,Yes
+PGA5,P0DJD9,PEPA5_HUMAN Pepsin A-5,A01.071,pepsin A5 ({Homo sapiens}),Gene match: PGA5 g.p. ({Homo sapiens}),Yes,Yes
+GZMB,P10144,GRAB_HUMAN Granzyme B,S01.010,granzyme B ({Homo sapiens}-type),Gene match: GZMB g.p. ({Homo sapiens}),Yes,Yes
+GZMA,P12544,GRAA_HUMAN Granzyme A,S01.135,granzyme A,Gene match: GZMA g.p. ({Homo sapiens}),Yes,Yes
+ACE,P12821,ACE_HUMAN Angiotensin-converting enzyme,A01.004,BACE1 g.p. ({Homo sapiens}),Gene match: BACE1 g.p. ({Homo sapiens}),Yes,Yes
+BMP1,P13497,BMP1_HUMAN Bone morphogenetic protein 1,M12.005,procollagen C-peptidase,Gene match: BMP1 g.p. ({Homo sapiens}),Yes,Yes
+IDE,P14735,IDE_HUMAN Insulin-degrading enzyme,A01.A88,DDB_0205773 ({Dictyostelium discoideum}),Gene match: DDB_0205773 ({Dictyostelium discoideum}),Yes,Yes
+MMP9,P14780,MMP9_HUMAN Matrix metalloproteinase-9,M04.001,thermolysin,UniProt in cleavage: P14780,Yes,Yes
+CPA1,P15085,CBPA1_HUMAN Carboxypeptidase A1,M14.001,carboxypeptidase A1,"Gene match: carboxypeptidase A, CPA1 g.p. ({Homo sapiens})",Yes,Yes
+CPB1,P15086,CBPB1_HUMAN Carboxypeptidase B,M14.003,carboxypeptidase B,Gene match: CPB1 g.p. ({Homo sapiens}),Yes,Yes
+CPN1,P15169,CBPN_HUMAN Carboxypeptidase N catalytic chain,M14.004,carboxypeptidase N,Gene match: CPN1 g.p. ({Homo sapiens}),Yes,Yes
+PCSK2,P16519,NEC2_HUMAN Neuroendocrine convertase 2,S08.073,PCSK2 peptidase,Gene match: PCSK2 g.p. ({Homo sapiens}),Yes,Yes
+CPE,P16870,CBPE_HUMAN Carboxypeptidase E,S10.013,SCPEP1 peptidase,Gene match: SCPEP1 g.p. ({Homo sapiens}),Yes,Yes
+PGC,P20142,PEPC_HUMAN Gastricsin,M28.014,carboxypeptidase Q,Gene match: PGCP,Yes,Yes
+TPSB2,P20231,TRYB2_HUMAN Tryptase beta-2,S01.015,tryptase beta,Gene match: TPSB2 g.p. ({Homo sapiens}),Yes,Yes
+TGM2,P21980,TGM2_HUMAN Protein-glutamine gamma-glutamyltransferase 2,C01.032,cathepsin L,UniProt in cleavage: P21980,Yes,Yes
+CMA1,P23946,CMA1_HUMAN Chymase,S01.140,chymase ({Homo sapiens}-type),Gene match: CMA1 g.p. ({Homo sapiens}),Yes,Yes
+PRTN3,P24158,PRTN3_HUMAN Myeloblastin,S01.134,myeloblastin,Gene match: PRTN3 g.p. ({Homo sapiens}),Yes,Yes
+CTSS,P25774,CATS_HUMAN Cathepsin S,C01.034,cathepsin S,Gene match: CTSS g.p. ({Homo sapiens}),Yes,Yes
+DPP4,P27487,DPP4_HUMAN Dipeptidyl peptidase 4,S09.003,dipeptidyl-peptidase IV (eukaryote),Gene match: DPP4,Yes,Yes
+PCSK6,P29122,PCSK6_HUMAN Proprotein convertase subtilisin/kexin type 6,S08.075,PCSK6 peptidase,Gene match: PCSK6 g.p. ({Homo sapiens}),Yes,Yes
+PRSS3,P35030,TRY3_HUMAN Trypsin-3,S01.075,tryptase-6,Gene match: PRSS33 g.p. ({Homo sapiens}),Yes,Yes
+CTSK,P43235,CATK_HUMAN Cathepsin K,C01.034,cathepsin S,UniProt in cleavage: P43235,Yes,Yes
+CPA2,P48052,CBPA2_HUMAN Carboxypeptidase A2,M14.002,carboxypeptidase A2,Gene match: CPA2 g.p. ({Homo sapiens}),Yes,Yes
+MASP1,P48740,MASP1_HUMAN Mannan-binding lectin serine protease 1,S01.198,mannan-binding lectin-associated serine peptidase 1,Gene match: MASP1 g.p. ({Homo sapiens}),Yes,Yes
+KLK7,P49862,KLK7_HUMAN Kallikrein-7,S01.300,kallikrein-related peptidase 7,Gene match: KLK7 g.p. ({Homo sapiens}),Yes,Yes
+GZMK,P49863,GRAK_HUMAN Granzyme K,S01.146,granzyme K,Gene match: GZMK g.p. ({Homo sapiens}),Yes,Yes
+GZMM,P51124,GRAM_HUMAN Granzyme M,S01.139,granzyme M,Gene match: GZMM g.p. ({Homo sapiens}),Yes,Yes
+CASP7,P55210,CASP7_HUMAN Caspase-7,C02.001,calpain-1,UniProt in cleavage: P55210,Yes,Yes
+PRSS12,P56730,NETR_HUMAN Neurotrypsin,S01.237,neurotrypsin,Gene match: PRSS12 g.p. ({Homo sapiens}),Yes,Yes
+ADAMTS12,P58397,ATS12_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 12,M12.237,ADAMTS12 peptidase,Gene match: ADAMTS12 peptidase,Yes,Yes
+ADAMTS20,P59510,ATS20_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 20,M12.246,ADAMTS20 peptidase ({Homo sapiens}-type),Gene match: ADAMTS20 peptidase ({Homo sapiens}-type),Yes,Yes
+DCD,P81605,DCD_HUMAN Dermcidin,A01.009,cathepsin D,UniProt in cleavage: P81605,Yes,Yes
+HTRA4,P83105,HTRA4_HUMAN Serine protease HTRA4,S01.285,HtrA4 peptidase,Gene match: HtrA4 peptidase,Yes,Yes
+HTRA3,P83110,HTRA3_HUMAN Serine protease HTRA3,S01.284,HtrA3 peptidase,Gene match: HtrA3 peptidase,Yes,Yes
+FAP,Q12884,SEPR_HUMAN Prolyl endopeptidase FAP,A01.022,plasmepsin-1,Gene match: PFAPG,Yes,Yes
+PAPPA,Q13219,PAPP1_HUMAN Pappalysin-1,M43.004,pappalysin-1,Gene match: PAPPA g.p. ({Homo sapiens}),Yes,Yes
+ADAM9,Q13443,ADAM9_HUMAN Disintegrin and metalloproteinase domain-containing protein 9,M12.209,ADAM9 peptidase,Gene match: ADAM9 peptidase,Yes,Yes
+HABP2,Q14520,HABP2_HUMAN Hyaluronan-binding protein 2,S01.033,factor VII-activating peptidase,Gene match: HABP2 g.p. ({Homo sapiens}),Yes,Yes
+CLCA4,Q14CN2,CLCA4_HUMAN Calcium-activated chloride channel regulator 4,M87.002,chloride channel accessory protein 4,Gene match: CLCA4 g.p. ({Homo sapiens}),Yes,Yes
+TPSAB1,Q15661,TRYB1_HUMAN Tryptase alpha/beta-1,S01.143,tryptase alpha,Gene match: TPSAB1 g.p. ({Homo sapiens}),Yes,Yes
+PRSS8,Q16651,PRSS8_HUMAN Prostasin,S01.159,prostasin,Gene match: PRSS8 g.p. ({Homo sapiens}),Yes,Yes
+MEP1B,Q16820,MEP1B_HUMAN Meprin A subunit beta,M12.004,meprin beta subunit,Gene match: MEP1B g.p. ({Homo sapiens}),Yes,Yes
+MMEL1,Q495T6,MMEL1_HUMAN Membrane metallo-endopeptidase-like 1,M13.008,neprilysin-2,Gene match: MMEL1 g.p. ({Homo sapiens}),Yes,Yes
+PRSS36,Q5K4E3,POLS2_HUMAN Polyserase-2,XS01.002,polyserase-2,Gene match: PRSS36,Yes,Yes
+CPZ,Q66K79,CBPZ_HUMAN Carboxypeptidase Z,C01.A38,cpz-1 g.p. ({Caenorhabditis elegans}),Gene match: cpz-1 g.p. ({Caenorhabditis elegans}),Yes,Yes
+PRSS57,Q6UWY2,PRS57_HUMAN Serine protease 57,S01.319,neutrophil serine peptidase 4,Gene match: PRSS57 g.p. ({Homo sapiens}),Yes,Yes
+ADAMTS13,Q76LX8,ATS13_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 13,M12.241,ADAMTS13 peptidase,Gene match: ADAMTS13 peptidase,Yes,Yes
+OVCH2,Q7RTZ1,OVCH2_HUMAN Ovochymase-2,S01.240,ovochymase-2,Gene match: OVCH2 g.p. ({Homo sapiens}),Yes,Yes
+CPA6,Q8N4T0,CBPA6_HUMAN Carboxypeptidase A6,M14.018,carboxypeptidase A6,Gene match: CPA6 g.p. ({Homo sapiens}),Yes,Yes
+PCSK9,Q8NBP7,PCSK9_HUMAN Proprotein convertase subtilisin/kexin type 9,S08.039,PCSK9 peptidase,Gene match: PCSK9 g.p. ({Homo sapiens}),Yes,Yes
+ADAMTS17,Q8TE56,ATS17_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 17,M12.027,ADAMTS17 peptidase,Gene match: ADAMTS17 peptidase,Yes,Yes
+ADAMTS16,Q8TE57,ATS16_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 16,M12.026,ADAMTS16 peptidase,Gene match: ADAMTS16 peptidase,Yes,Yes
+ADAMTS15,Q8TE58,ATS15_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 15,M12.025,ADAMTS15 peptidase,Gene match: ADAMTS15 peptidase,Yes,Yes
+ADAMTS19,Q8TE59,ATS19_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 19,M12.029,ADAMTS19 peptidase,Gene match: ADAMTS19 peptidase,Yes,Yes
+ADAMTS18,Q8TE60,ATS18_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 18,M12.028,ADAMTS18 peptidase,Gene match: ADAMTS18 peptidase,Yes,Yes
+ADAMTS14,Q8WXS8,ATS14_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 14,M12.024,ADAMTS14 peptidase,Gene match: ADAMTS14 peptidase,Yes,Yes
+HTRA1,Q92743,HTRA1_HUMAN Serine protease HTRA1,S01.277,HtrA1 peptidase ({Homo sapiens}-type),Gene match: HtrA1 peptidase ({Homo sapiens}-type),Yes,Yes
+GGH,Q92820,GGH_HUMAN Gamma-glutamyl hydrolase,C26.001,gamma-glutamyl hydrolase,Gene match: GGH g.p. ({Homo sapiens}),Yes,Yes
+PCSK5,Q92824,PCSK5_HUMAN Proprotein convertase subtilisin/kexin type 5,S08.076,PCSK5 peptidase,Gene match: PCSK5 peptidase,Yes,Yes
+KLK6,Q92876,KLK6_HUMAN Kallikrein-6,S01.236,kallikrein-related peptidase 6,Gene match: KLK6 g.p. ({Homo sapiens}),Yes,Yes
+CPB2,Q96IY4,CBPB2_HUMAN Carboxypeptidase B2,M14.009,carboxypeptidase B2,Gene match: CPB2 g.p. ({Homo sapiens}),Yes,Yes
+CNDP1,Q96KN2,CNDP1_HUMAN Beta-Ala-His dipeptidase,M20.006,carnosine dipeptidase I,Gene match: CNDP1 g.p. ({Homo sapiens}),Yes,Yes
+PAPPA2,Q9BXP8,PAPP2_HUMAN Pappalysin-2,M43.005,pappalysin-2,Gene match: PAPPA2 g.p. ({Homo sapiens}),Yes,Yes
+TMPRSS13,Q9BYE2,TMPSD_HUMAN Transmembrane protease serine 13,S01.087,TMPRSS13 peptidase,Gene match: TMPRSS13 g.p. ({Homo sapiens}),Yes,Yes
+ACE2,Q9BYF1,ACE2_HUMAN Angiotensin-converting enzyme 2,A01.041,BACE2 g.p. ({Homo sapiens}),Gene match: BACE2 g.p. ({Homo sapiens}),Yes,Yes
+TPSD1,Q9BZJ3,TRYD_HUMAN Tryptase delta,S01.054,tryptase delta 1 ({Homo sapiens}),Gene match: TPSD1 g.p. ({Homo sapiens}),Yes,Yes
+PRSS22,Q9GZN4,BSSP4_HUMAN Brain-specific serine protease 4,S01.252,prosemin,Gene match: PRSS22 g.p. ({Homo sapiens}),Yes,Yes
+KLK15,Q9H2R5,KLK15_HUMAN Kallikrein-15,S01.081,kallikrein-related peptidase 15,Gene match: KLK15 g.p. ({Homo sapiens}),Yes,Yes
+ADAMTS10,Q9H324,ATS10_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 10,M12.235,ADAMTS10 peptidase,Gene match: ADAMTS10 peptidase,Yes,Yes
+MMP25,Q9NPA2,MMP25_HUMAN Matrix metalloproteinase-25,M10.017,membrane-type matrix metallopeptidase-4,Gene match: Mmp25beta ({Brachydanio rerio}),Yes,Yes
+TMPRSS4,Q9NRS4,TMPS4_HUMAN Transmembrane protease serine 4,S01.034,"transmembrane peptidase, serine 4",Gene match: TMPRSS4 g.p. ({Homo sapiens}),Yes,Yes
+ADAMTS9,Q9P2N4,ATS9_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 9,M12.021,ADAMTS9 peptidase,Gene match: ADAMTS9 g.p. ({Homo sapiens}),Yes,Yes
+KLK11,Q9UBX7,KLK11_HUMAN Kallikrein-11,S01.257,kallikrein-related peptidase 11,Gene match: KLK11 g.p. ({Homo sapiens}),Yes,Yes
+ADAMTS1,Q9UHI8,ATS1_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 1,M12.024,ADAMTS14 peptidase,Gene match: ADAMTS14 peptidase,Yes,Yes
+DPP7,Q9UHL4,DPP2_HUMAN Dipeptidyl peptidase 2,S28.002,dipeptidyl-peptidase II,Gene match: DPP7 g.p. ({Homo sapiens}),Yes,Yes
+CPA4,Q9UI42,CBPA4_HUMAN Carboxypeptidase A4,M14.017,carboxypeptidase A4,Gene match: CPA4 g.p. ({Homo sapiens}),Yes,Yes
+LNPEP,Q9UIQ6,LCAP_HUMAN Leucyl-cystinyl aminopeptidase,M01.011,cystinyl aminopeptidase,Gene match: LNPEP g.p. ({Homo sapiens}),Yes,Yes
+ADAMTS7,Q9UKP4,ATS7_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 7,M12.231,ADAMTS7 peptidase,Gene match: ADAMTS7 g.p. ({Homo sapiens}),Yes,Yes
+ADAMTS6,Q9UKP5,ATS6_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 6,M12.230,ADAMTS6 peptidase,Gene match: ADAMTS6 g.p. ({Homo sapiens}),Yes,Yes
+ADAM28,Q9UKQ2,ADA28_HUMAN Disintegrin and metalloproteinase domain-containing protein 28,M12.224,ADAM28 peptidase ({Homo sapiens}-type),Gene match: ADAM28 peptidase ({Homo sapiens}-type),Yes,Yes
+KLK12,Q9UKR0,KLK12_HUMAN Kallikrein-12,S01.020,kallikrein-related peptidase 12,Gene match: KLK12 g.p. ({Homo sapiens}),Yes,Yes
+ADAMTS5,Q9UNA0,ATS5_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 5,M12.225,ADAMTS5 peptidase,Gene match: ADAMTS5 g.p. ({Homo sapiens}),Yes,Yes
+CELA1,Q9UNI1,CELA1_HUMAN Chymotrypsin-like elastase family member 1,S01.153,elastase-1,Gene match: CELA1 g.p. ({Homo sapiens}),Yes,Yes
+ADAMTS8,Q9UP79,ATS8_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 8,M12.226,ADAMTS8 peptidase,Gene match: ADAMTS8 g.p. ({Homo sapiens}),Yes,Yes
+CLCA2,Q9UQC9,CLCA2_HUMAN Calcium-activated chloride channel regulator 2,M87.003,chloride channel accessory protein 2,Gene match: CLCA2 g.p. ({Homo sapiens}),Yes,Yes
+KLK5,Q9Y337,KLK5_HUMAN Kallikrein-5,S01.017,kallikrein-related peptidase 5,Gene match: KLK5 g.p. ({Homo sapiens}),Yes,Yes
+KLK4,Q9Y5K2,KLK4_HUMAN Kallikrein-4,S01.251,kallikrein-related peptidase 4,Gene match: KLK4 g.p. ({Homo sapiens}),Yes,Yes
+CORIN,Q9Y5Q5,CORIN_HUMAN Atrial natriuretic peptide-converting enzyme,S01.019,corin,Gene match: corin,Yes,Yes
+PRSS23,O95084,PRS23_HUMAN Serine protease 23,S01.309,umbilical vein peptidase,Gene match: PRSS23 g.p. ({Homo sapiens}),Yes,Yes
+CTRB1,P17538,CTRB1_HUMAN Chymotrypsinogen B,S01.152,chymotrypsin B,Gene match: CTRB1 g.p. ({Homo sapiens}),Yes,Yes
+PRSS33,Q8NF86,PRS33_HUMAN Serine protease 33,S01.075,tryptase-6,Gene match: PRSS33 g.p. ({Homo sapiens}),Yes,Yes
+PRSS3P2,Q8NHM4,TRY6_HUMAN Putative trypsin-6,A02.001,HIV-1 retropepsin,UniProt in cleavage: Q8NHM4,Yes,Yes
+CPA5,Q8WXQ8,CBPA5_HUMAN Carboxypeptidase A5,M14.020,carboxypeptidase A5,Gene match: CPA5 g.p. ({Homo sapiens}),Yes,Yes
+PRSS27,Q9BQR3,PRS27_HUMAN Serine protease 27,S01.074,marapsin,Gene match: PRSS27 g.p. ({Homo sapiens}),Yes,Yes
+RNPEP,Q9H4A4,AMPB_HUMAN Aminopeptidase B,M01.022,arginyl aminopeptidase-like 1,Gene match: RNPEP-like protein1,Yes,Yes
+SCPEP1,Q9HB40,RISC_HUMAN Retinoid-inducible serine carboxypeptidase,S10.013,SCPEP1 peptidase,Gene match: SCPEP1 g.p. ({Homo sapiens}),Yes,Yes
+KLK13,Q9UKR3,KLK13_HUMAN Kallikrein-13,S01.306,kallikrein-related peptidase 13,Gene match: KLK13 g.p. ({Homo sapiens}),Yes,Yes
+KLK9,Q9UKQ9,KLK9_HUMAN Kallikrein-9,S01.307,kallikrein-related peptidase 9,Gene match: KLK9 g.p. ({Homo sapiens}),Yes,Yes
