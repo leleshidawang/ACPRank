@@ -475,3 +475,34 @@ python3 02_multi_level_peptide_generator.py --processes 12
 
 ### Use 2 processes to save memory
 python3 02_multi_level_peptide_generator.py --processes 2
+
+&nbsp;
+
+# ACPRank.py: Anticancer Peptide Activity Ranking Model
+
+### 📊 Overview
+
+`ACPRank.py` is the core training script for the ACPRank pipeline's ranking stage. It trains a **Transformer-based deep learning model** to predict and rank the anticancer activity (ACP) of peptides. The model learns to identify which peptides are most likely to have strong anticancer properties based on their amino acid sequences.
+
+### 🎯 Main Objectives
+
+1. **Load pretrained representations** from a Masked Language Model (MLM)
+2. **Train a ranking model** using cost-sensitive learning
+3. **Optimize for ACP prediction** with multiple ranking metrics
+4. **Evaluate model performance** using domain-specific evaluation metrics
+
+### 🚀 Usage
+
+```bash
+python3 ACPRank.py
+```
+
+The script will:
+1. Load peptide data from `ACPs.csv`
+2. Load pretrained weights from `models/peptide_mlm_model_best.weights.h5`
+3. Train ranking model for up to 50 epochs
+4. Save best model and results to `models/`
+
+
+
+
