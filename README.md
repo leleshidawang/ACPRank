@@ -503,14 +503,42 @@ python3 02_multi_level_peptide_generator.py --processes 2
 
 ### 📊 Overview
 
-`ACPRank.py` is the core training script for the ACPRank pipeline's ranking stage. It trains a **Transformer-based deep learning model** to predict and rank the anticancer activity (ACP) of peptides. The model learns to identify which peptides are most likely to have strong anticancer properties based on their amino acid sequences.
+`ACPRank.py` is the core training script for the ACPRank pipeline's ranking stage. It trains a **deep learning model** to predict and rank the anticancer activity of peptides. The model learns to identify which peptides are most likely to have strong anticancer properties based on their amino acid sequences.
 
-### 🎯 Main Objectives
+### 💻 System Requirements
 
-1. **Load pretrained representations** from a Masked Language Model (MLM)
-2. **Train a ranking model** using cost-sensitive learning
-3. **Optimize for ACP prediction** with multiple ranking metrics
-4. **Evaluate model performance** using domain-specific evaluation metrics
+- **Key Python Dependencies:**
+  - `tensorflow == 2.18.0`
+  - `numpy == 1.26.4`
+  - `pandas == 2.2.3`
+  - `scikit-learn == 1.6.1`
+  - `scipy == 1.15.2`
+  - `matplotlib == 3.10.1`
+  - `tqdm == 4.67.1`
+
+**Step 1: Download Essential Files**
+Please access the Zenodo repository to download the required dependency packages:
+🔗 **[https://zenodo.org/uploads/18050535](https://zenodo.org/uploads/18050535)**
+
+You need to download two files:
+1. `src.zip` (Source code for model definitions)
+2. `models.zip` (Pre-trained MLM weights and configuration)
+
+**Step 2: Setup Directory**
+Unzip both files into the root directory of the project. Ensure your local directory structure matches the tree below before running the script:
+
+```text  
+Project_Root/  
+├── ACPRank.py                      # Main training script  
+├── ACPs.csv                        # Training data  
+├── src/                            # [Unzipped from src.zip]  
+│   └── models/                     # Custom model definitions  
+│       ├── layers.py  
+│       ├── peptide_mlm.py  
+│       └── peptide_ranking.py  
+└── models/                         # [Unzipped from models.zip]  
+    ├── config.json                 # Model configuration  
+    └── peptide_mlm_model_best.weights.h5  # REQUIRED: Pre-trained weights  
 
 ### 🚀 Usage
 
