@@ -326,6 +326,13 @@ db_config = {
 
 `02_multi_level_peptide_generator.py` is the second stage of the ACPRank pipeline. It uses the prediction models trained in stage 1 (01) to predict protease cleavage sites in target sequences and generates multi-level peptides based on these sites. The script uses multiprocessing to accelerate large-scale sequence analysis.
 
+### 💻 System Requirements
+
+This script performs high-throughput sequence processing and requires the following environment:
+
+- **Key Python Dependencies:**
+  - `biopython == 1.85`
+
 ### 🔄 Workflow
 
 ```
