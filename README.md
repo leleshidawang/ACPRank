@@ -46,6 +46,20 @@ ACPRank, a computational framework based on cost-aware ranking learning designed
 └─────────────────────────────────────────────────────┘
 ```
 
+### 💻 System Requirements
+
+This script has been developed and tested on the following environment:
+
+- **Operating System:** Linux / Windows / macOS
+- **Python Version:** 3.8.19
+- **Key Python Dependencies:**
+  - `biopython == 1.78`
+  - `mysql-connector-python == 8.0.31`
+  - `numpy == 1.24.3`
+  - `requests == 2.32.2`
+
+> **Note:** Access to a MySQL database (local or remote) containing the MEROPS data is required to run this script.
+
 ### 📥 Input Files
 
 #### 1. **merops_valid_id_mapping.csv** (Required)
