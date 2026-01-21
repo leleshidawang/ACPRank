@@ -518,7 +518,7 @@ python3 02_multi_level_peptide_generator.py --processes 2
 
 **Step 1: Download Essential Files**
 Please access the Zenodo repository to download the required dependency packages:
-🔗 **[https://zenodo.org/uploads/18050535](https://zenodo.org/uploads/18050535)**
+🔗 **[https://zenodo.org/records/18321658](https://zenodo.org/records/18321658)**
 
 You need to download two files:
 1. `src.zip` (Source code for model definitions)
